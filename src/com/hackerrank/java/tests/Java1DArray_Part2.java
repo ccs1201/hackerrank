@@ -21,7 +21,7 @@ public class Java1DArray_Part2 {
     private static boolean isWinnable(int leap, int[] game, int lastPosition) {
         if (lastPosition < 0 || game[lastPosition] == 1) return false;
         if ((lastPosition == game.length - 1) || lastPosition + leap > game.length - 1) return true;
-        
+
         game[lastPosition] = 1;
 
         return isWinnable(leap, game, lastPosition + 1) || isWinnable(leap, game, lastPosition - 1) || isWinnable(leap, game, lastPosition + leap);
